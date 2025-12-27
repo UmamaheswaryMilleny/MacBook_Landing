@@ -2,12 +2,13 @@
 
 import React, {useEffect} from 'react'
 import {useGLTF, useTexture} from '@react-three/drei'
+// useGLF is used to load 3d model and usetexture load image and turns into a threejs texture
 import useMacbookStore from "../../store/index.js";
 import {noChangeParts} from "../../constants/index.js";
 import {Color} from "three";
 
 export default function MacbookModel16(props) {
-    const { nodes, materials,scene } = useGLTF('/models/macbook-14-transformed.glb')
+    const { nodes, materials,scene } = useGLTF('/models/macbook-16-transformed.glb')
     const {color} = useMacbookStore()
     const texture = useTexture('/screen.png')
     useEffect(() => {

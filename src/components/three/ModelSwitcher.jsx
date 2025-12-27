@@ -1,4 +1,6 @@
 import {useRef} from "react";
+
+// it is used to add rotate drag
 import {PresentationControls} from "@react-three/drei";
 import MacbookModel16 from "../models/Macbook-16.jsx";
 import MacbookModel14 from "../models/Macbook-14.jsx";
@@ -19,11 +21,15 @@ group.traverse((child)=>{
 })
 }
 
+// group = MacBook (14 or 16),traverse = go through every part
+// isMesh = only visible parts,transparent = true = REQUIRED to fade
+// GSAP animates opacity smoothly
+
 const moveGroup=(group,x)=>{
     if(!group) return;
     gsap.to(group.position,{x,duration:ANIMATION_DURATION})
 }
-
+// Moves the entire MacBook:Left Right Or center This creates a slide-in / slide-out effect.
 
 
 const ModelSwitcher = ({scale,isMobile}) => {
@@ -41,6 +47,7 @@ const ModelSwitcher = ({scale,isMobile}) => {
         if(showLargeMacbook){
             moveGroup(smallMacbookRef.current,-OFFSET_DISTANCE);
             moveGroup(largeMacbookRef.current,0)
+
             fadeMeshes(smallMacbookRef.current,0)
             fadeMeshes(largeMacbookRef.current,1)
         }else{
