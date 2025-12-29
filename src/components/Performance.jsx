@@ -20,8 +20,7 @@ const Performance = () => {
             {
                 opacity:1,
                 y:0,
-                // duration:0.8,
-                ease:"powers1.out",
+                ease:"power1.out",
                 scrollTrigger:{
                     trigger:'.content p',
                     start:'top bottom',
