@@ -9,7 +9,7 @@ import  Features from "./components/Features.jsx";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Highlights from "./components/Highlights.jsx";
-
+import Footer from "./components/Footer.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 // registerplugin is done in app becasue it only run once becasue it is the root of our app and registering plugin once is enough for entire app
@@ -24,6 +24,7 @@ const App = () => {
           <Performance/>
           <Features/>
           <Highlights/>
+          <Footer/>
       </main>
     )
 }
