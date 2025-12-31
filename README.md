@@ -1,16 +1,58 @@
-# React + Vite
+# MacBook Pro 3D Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning and interactive landing page showcasing the MacBook Pro, featuring a 3D model viewer, smooth GSAP animations, and a responsive design. This project serves as a clone/showcase demonstrating modern web development techniques.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [GSAP](https://gsap.com/) (ScrollTrigger)
+- **3D Graphics**: [Three.js](https://threejs.org/) with [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber) & [@react-three/drei](https://github.com/pmndrs/drei)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive 3D Model Viewer**: View the MacBook Pro in 3D with options to change size (14" vs 16") and color (Space Gray vs Dark).
+- **GSAP Animations**: Smooth scroll-triggered animations and transitions for a premium feel.
+- **Responsive Design**: Optimized for various screen sizes, ensuring a consistent experience across desktop and mobile.
+- **Video Showcases**: High-quality video highlights integrated seamlessly.
 
-## Expanding the ESLint configuration
+## 🛠️ Installation & Usage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clone the repository**
+
+    ```bash
+    git clone <repository-url>
+    cd macbook
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+- `src/components`: Contains all UI components (Navbar, Hero, ProductViewer, etc.).
+  - `src/components/three`: Three.js specific components (StudioLights, ModelSwitcher).
+- `src/store`: Zustand state management stores.
+- `src/constants`: Application constants and data.
+- `src/utils`: Utility functions (if any).
+- `src/App.jsx`: Main application entry point setting up global GSAP plugins.
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
